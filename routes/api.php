@@ -8,10 +8,10 @@ Route::get('/nome',function(Request $request){
 return $nome;
 });
 
-Route::get('/nome\idade',function(Request $request){
+Route::get('/nome/idade',function(Request $request){
     $nome = $request ->input('nome');
     $idade = $request ->input('idade');
-    return 'Meu Nome é' . $nome . ' Minha Idade é '. $idade;
+    return ' Meu Nome é '.' '. $nome .' '. 'Minha Idade é '.' '. $idade;
 
 });
 
@@ -20,7 +20,7 @@ Route::get('/nome/idade/cidade',function(Request $request){
     $idade = $request ->input('idade');
     $cidade = $request ->input('cidade');
 
-    return $nome .' '. $idade .' '. $cidade;
+    return ' Meu Nome é ' .' '. $nome . ' minha idade é ' .' '. $idade .' minha cidade é ' .' '. $cidade;
 
 });
 
@@ -78,7 +78,7 @@ $quartonumero = $request ->input('quartonumero');
 
 $quintonumero = $request ->input('quintonumero');
 
-$resultado = $primeironumero + $segundonumero + $terceironumero + $quartonumero + $quintonumero / 5;
+$resultado = ($primeironumero + $segundonumero + $terceironumero + $quartonumero + $quintonumero) / 5;
 
 return $resultado;
 });
