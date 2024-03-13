@@ -14,3 +14,12 @@ Route::get('/nome\idade',function(Request $request){
     return 'Meu Nome é' . $nome . ' Minha Idade é '. $idade;
 
 });
+
+Route::get('/nome/idade/cidade',function(Request $request){
+    $nome = $request ->input('nome');
+    $idade = $request ->input('idade');
+    $cidade = $request ->input('cidade');
+
+    return $nome .' '. $idade .' '. $cidade;
+
+});
