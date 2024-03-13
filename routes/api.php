@@ -149,3 +149,13 @@ Route::get('/dobrodonumero',function(Request $request){
                     
                     });
                     
+
+                    Route::get('/dias',function(Request $request){
+
+
+                        $dias = $request->input('dias');
+                        
+                        
+                        $resultado =($dias * 24).' horas '. ($dias * 1440).' minutos '. ($dias * 86400) .' '. 'segundos';
+                        return $resultado;
+                        });
