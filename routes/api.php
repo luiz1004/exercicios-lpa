@@ -139,3 +139,13 @@ Route::get('/dobrodonumero',function(Request $request){
                 
                 return $pontos;
                 });
+
+                Route::get('/comissao',function(Request $request){
+
+                    $venda = $request ->input('venda');
+                    $comissao = $request ->input('comissao');
+                    $resultado = ($venda * $comissao) / 100;
+                    return $resultado;
+                    
+                    });
+                    
