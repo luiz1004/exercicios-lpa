@@ -82,3 +82,14 @@ $resultado = $primeironumero + $segundonumero + $terceironumero + $quartonumero 
 
 return $resultado;
 });
+
+Route::get('/conta/divi2',function(Request $request){
+
+    $primeironumero = $request->input('primeironumero');
+
+    $segundonumero = $request->input('segundonumero');
+
+
+$resultado = $segundonumero / $primeironumero;
+return $resultado;
+});
