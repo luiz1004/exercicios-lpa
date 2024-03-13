@@ -113,3 +113,12 @@ Route::get('/dobrodonumero',function(Request $request){
         return $resultado;
     
     });
+
+    Route::get('/desconto',function(Request $request){
+
+        $preco = $request ->input('preco');
+        $desconto = $request ->input('desconto');
+        $valorDesconto = $desconto * $preco/100;
+        $valorComDesconto = $preco - $valorDesconto;
+        return $valorComDesconto;
+        });
