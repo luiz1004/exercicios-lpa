@@ -131,3 +131,11 @@ Route::get('/dobrodonumero',function(Request $request){
             return 'o salario anterior é' .' '. $salarioanterior .' '. 'o novo salario é de' .' '. $resultado + $salarioanterior;
             });
             
+
+            Route::get('/pontos',function(Request $request){
+
+                $valorgasto = $request ->input('valorgasto');
+                $pontos = $valorgasto /10;
+                
+                return $pontos;
+                });
