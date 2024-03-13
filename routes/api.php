@@ -43,3 +43,14 @@ $terceironumero = $request->input('terceironumero');
 $resultado = $primeironumero - $segundonumero - $terceironumero;
 return $resultado;
 });
+
+Route::get('/conta/divi',function(Request $request){
+
+    $primeironumero = $request->input('primeironumero');
+
+    $segundonumero = $request->input('segundonumero');
+
+
+$resultado = $primeironumero / $segundonumero;
+return $resultado;
+});
