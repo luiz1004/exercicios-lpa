@@ -65,3 +65,20 @@ Route::get('/conta/multi',function(Request $request){
 $resultado = $primeironumero * $segundonumero;
 return $resultado;
 });
+
+Route::get('/conta/media',function(Request $request){
+
+    $primeironumero = $request->input('primeironumero');
+
+    $segundonumero = $request->input('segundonumero');
+
+$terceironumero = $request->input('terceironumero');
+
+$quartonumero = $request ->input('quartonumero');
+
+$quintonumero = $request ->input('quintonumero');
+
+$resultado = $primeironumero + $segundonumero + $terceironumero + $quartonumero + $quintonumero / 5;
+
+return $resultado;
+});
