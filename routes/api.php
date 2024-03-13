@@ -102,3 +102,14 @@ Route::get('/dobrodonumero',function(Request $request){
     return 'O dobro do ' . $onumeroé . ' é igual a ' . $resultado;
     
     });
+
+    Route::get('/retangulo',function(Request $request){
+
+        $base = $request  ->input('base');
+        $altura = $request ->input('altura');
+    
+        $resultado = $base * $altura;
+    
+        return $resultado;
+    
+    });
