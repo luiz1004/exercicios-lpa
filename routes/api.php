@@ -159,3 +159,11 @@ Route::get('/dobrodonumero',function(Request $request){
                         $resultado =($dias * 24).' horas '. ($dias * 1440).' minutos '. ($dias * 86400) .' '. 'segundos';
                         return $resultado;
                         });
+
+                        Route::get('/quantidade',function(Request $request){
+
+                            $preco = $request->input('preco');
+                            $quantidade = $request ->input('quantidade');
+                            $resultado = $preco * $quantidade;
+                            return $resultado;
+                            });
