@@ -199,3 +199,67 @@ Route::Get('parimpar', function (Request $request) {
         return 'impar';
     }
 });
+
+
+Route::Get('exercicios21', function (Request $request) {
+
+    $numero = $request->input('numero');
+
+    if ($numero > 10) {
+        return "Maior que 10";
+    } else {
+        return "Menor que 10";
+    }
+});
+
+
+Route::Get('exercicios22', function (Request $request) {
+
+    $temperatura = $request->input('temperatura');
+    if ($temperatura >= 30) {
+        return "Esta quente";
+    } else {
+        return "Esta Frio";
+    }
+});
+
+Route::Get('exercicios23', function (Request $request) {
+
+    $numero = $request->input('numero');
+
+
+    if ($numero > 0) {
+        return "Positivo";
+    } else if ($numero == 0) {
+        return "numero é zero";
+    } else {
+        return "Negativo";
+    }
+});
+
+Route::Get('exercicios24', function (Request $request) {
+
+    $numero1 = $request->input('numero1');
+    $numero2 = $request->input('numero2');
+
+    if ($numero1 > $numero2) {
+return "o primeiro numero é maior";
+    } else {
+        return "o segundo numero é maior";
+    }
+});
+
+
+Route::Get('exercicios25', function (Request $request){
+
+$numero = $request->input('numero');
+
+if ($numero % 3 == 0){
+    return "o numero é divisivel";
+} else {
+    return "o numero nao é divisivel";
+}
+
+
+ 
+});
