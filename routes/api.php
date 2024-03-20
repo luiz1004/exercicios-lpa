@@ -175,3 +175,27 @@ Route::Get('/exemplocondicao', function (Request $request) {
 
     return $retorno;
 });
+
+
+
+
+Route::Get('verificandoidade', function (Request $request) {
+
+    $idade = $request->input('idade');
+
+    if ($idade <= 18) {;
+        return  "maior de idade";
+    } else {
+        return "menor de idade";
+    };
+});
+
+Route::Get('parimpar', function (Request $request) {
+
+    $numero = $request->input('numero');
+    if ($numero % 2 == 0) {
+        return 'par';
+    } else {
+        return 'impar';
+    }
+});
