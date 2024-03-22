@@ -243,23 +243,174 @@ Route::Get('exercicios24', function (Request $request) {
     $numero2 = $request->input('numero2');
 
     if ($numero1 > $numero2) {
-return "o primeiro numero é maior";
+        return "o primeiro numero é maior";
     } else {
         return "o segundo numero é maior";
     }
 });
 
 
-Route::Get('exercicios25', function (Request $request){
+Route::Get('exercicios25', function (Request $request) {
 
-$numero = $request->input('numero');
+    $numero = $request->input('numero');
 
-if ($numero % 3 == 0){
-    return "o numero é divisivel";
-} else {
-    return "o numero nao é divisivel";
-}
+    if ($numero % 3 == 0) {
+        return "o numero é divisivel";
+    } else {
+        return "o numero nao é divisivel";
+    }
+});
 
 
- 
+Route::Get('exercicios26', function (Request $request) {
+
+    $numero = $request->input('numero');
+
+    if ($numero % 9 == 0) {
+        return "o numero é divisivel";
+    } else {
+        return "o numero nao é divisivel";
+    }
+});
+
+
+Route::Get('exercicios27', function (Request $request) {
+
+    $numero = $request->input('numero');
+
+    if ($numero % 7 == 0) {
+        return "o numero é multiplo";
+    } else {
+        return "o numero nao é multiplo";
+    }
+});
+
+Route::Get('/exercicios28', function (Request $request) {
+
+    $idade = $request->input('idade');
+    $retorno = "";
+    if ($idade <= 12) {;
+        $retorno = "Você é uma criança";
+    } else ($retorno = "Você ja é adulto");
+
+    return $retorno;
+});
+
+
+Route::Get('/exercicios29', function (Request $request) {
+    $numero = $request->input('numero');
+
+    if ($numero % 2 == 0) {
+        if ($numero > 0)
+            return "o numero é impar e positivo";
+    } else {
+        return "o numero nao é impar";
+    }
+});
+
+
+
+Route::Get('exercicios30', function (Request $request) {
+
+    $numero = $request->input('numero');
+
+
+    if ($numero > 100) {
+        return "Maior que 100";
+    } else if ($numero == 100) {
+        return "numero é 100";
+    } else {
+        return "Menor que 100";
+    }
+});
+
+Route::Get('/exercicios31', function (Request $request) {
+
+    $numero = $request->input('numero');
+    if ($numero % 6 == 0) {
+        return 'É divisivel';
+    } else {
+        return 'Não é divisivel';
+    }
+});
+
+Route::Get('/exercicios32', function (Request $request) {
+
+    $nome = $request->input('nome');
+    if ($nome == "Alice") {
+        return "ola Alice";
+    } else {
+        return "voce não é a alice";
+    }
+});
+
+Route::Get('/exercicios33', function (Request $request) {
+    $idade = $request->input('nome');
+    $carteira = $request->input('carteira');
+    if ($idade >= 18) {
+        if ($carteira == "sim") {
+            return "ok voce é maior de idade";
+        }
+    } else {
+        return "voce nao pode dirigir";
+    }
+});
+
+
+Route::Get('/exercicios34', function (Request $request) {
+
+    $numero1 = $request->input('numero1');
+    $numero2 = $request->input('numero2');
+
+    if ($numero1 > $numero2) {
+        return "o primeiro numero é menor";
+    } elseif ($numero2 == $numero1) {
+        return "os numeros são iguais";
+    } else {
+        return "o segundo numero é menor";
+    }
+});
+
+
+Route::Get('/exercicios35', function (Request $request) {
+
+    $nome = $request->input('nome');
+    $idade = $request->input('idade');
+    if ($idade >= 18) {
+        return "Voce é maior de idade" . ' ' . $nome;
+    } else {
+        return "Voce é menor de idade" . ' ' . $nome;
+    }
+});
+
+Route::Get('/exercicios37', function (Request $request) {
+    $numero1 = $request->input('numero1');
+    $numero2 = $request->input('numero2');
+    if ($numero1 * $numero2 > 100) {
+        return "é maior que 100";
+    } elseif ($numero1 * $numero2 >= 100) {
+        return "o numero é 100";
+    } else {
+        return "o numero é menor que 100";
+    }
+});
+
+Route::Get('/exercicios36', function (Request $request) {
+
+    $numero1 = $request->input('numero1');
+    $numero2 = $request->input('numero2');
+
+    if ($numero1 == 0) {
+        return "o primeiro numero é igual a 0";
+    } elseif ($numero2 == 0) {
+        return "o segundo numero é igual a 0";
+   
+    }
+    $resultado = $numero1 / $numero2;
+    return $resultado;
+});
+
+
+Route::Get('exercicio', function(Request $request){
+
 });
