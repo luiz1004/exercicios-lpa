@@ -201,7 +201,7 @@ Route::Get('parimpar', function (Request $request) {
 });
 
 
-Route::Get('exercicios21', function (Request $request) {
+Route::Get('/exercicios21', function (Request $request) {
 
     $numero = $request->input('numero');
 
@@ -213,17 +213,7 @@ Route::Get('exercicios21', function (Request $request) {
 });
 
 
-Route::Get('exercicios22', function (Request $request) {
-
-    $temperatura = $request->input('temperatura');
-    if ($temperatura >= 30) {
-        return "Esta quente";
-    } else {
-        return "Esta Frio";
-    }
-});
-
-Route::Get('exercicios23', function (Request $request) {
+Route::Get('/exercicios22', function (Request $request) {
 
     $numero = $request->input('numero');
 
@@ -237,7 +227,28 @@ Route::Get('exercicios23', function (Request $request) {
     }
 });
 
-Route::Get('exercicios24', function (Request $request) {
+Route::Get('/exercicios23', function (Request $request) {
+
+    $idade = $request->input('idade');
+    $retorno = "";
+    if ($idade >= 18) {;
+        $retorno = "Maior de Idade";
+    } else ($retorno = "Menor de idade");
+
+    return $retorno;
+});
+
+Route::Get('/exercicios24', function (Request $request) {
+
+    $numero = $request->input('numero');
+    if ($numero % 2 == 0) {
+        return 'par';
+    } else {
+        return 'impar';
+    }
+});
+
+Route::Get('/exercicios25', function (Request $request) {
 
     $numero1 = $request->input('numero1');
     $numero2 = $request->input('numero2');
@@ -249,20 +260,7 @@ Route::Get('exercicios24', function (Request $request) {
     }
 });
 
-
-Route::Get('exercicios25', function (Request $request) {
-
-    $numero = $request->input('numero');
-
-    if ($numero % 3 == 0) {
-        return "o numero é divisivel";
-    } else {
-        return "o numero nao é divisivel";
-    }
-});
-
-
-Route::Get('exercicios26', function (Request $request) {
+Route::Get('/exercicios26', function (Request $request) {
 
     $numero = $request->input('numero');
 
@@ -273,8 +271,17 @@ Route::Get('exercicios26', function (Request $request) {
     }
 });
 
+Route::Get('/exercicios27', function (Request $request) {
 
-Route::Get('exercicios27', function (Request $request) {
+    $temperatura = $request->input('temperatura');
+    if ($temperatura >= 30) {
+        return "Esta quente";
+    } else {
+        return "Esta Frio";
+    }
+});
+
+Route::Get('/exercicios28', function (Request $request) {
 
     $numero = $request->input('numero');
 
@@ -285,7 +292,8 @@ Route::Get('exercicios27', function (Request $request) {
     }
 });
 
-Route::Get('/exercicios28', function (Request $request) {
+
+Route::Get('/exercicios29', function (Request $request) {
 
     $idade = $request->input('idade');
     $retorno = "";
@@ -296,8 +304,7 @@ Route::Get('/exercicios28', function (Request $request) {
     return $retorno;
 });
 
-
-Route::Get('/exercicios29', function (Request $request) {
+Route::Get('/exercicios30', function (Request $request) {
     $numero = $request->input('numero');
 
     if ($numero % 2 == 0) {
@@ -308,9 +315,7 @@ Route::Get('/exercicios29', function (Request $request) {
     }
 });
 
-
-
-Route::Get('exercicios30', function (Request $request) {
+Route::Get('exercicios31', function (Request $request) {
 
     $numero = $request->input('numero');
 
@@ -324,7 +329,7 @@ Route::Get('exercicios30', function (Request $request) {
     }
 });
 
-Route::Get('/exercicios31', function (Request $request) {
+Route::Get('/exercicios32', function (Request $request) {
 
     $numero = $request->input('numero');
     if ($numero % 6 == 0) {
@@ -334,7 +339,7 @@ Route::Get('/exercicios31', function (Request $request) {
     }
 });
 
-Route::Get('/exercicios32', function (Request $request) {
+Route::Get('/exercicios33', function (Request $request) {
 
     $nome = $request->input('nome');
     if ($nome == "Alice") {
@@ -344,7 +349,7 @@ Route::Get('/exercicios32', function (Request $request) {
     }
 });
 
-Route::Get('/exercicios33', function (Request $request) {
+Route::Get('/exercicios34', function (Request $request) {
     $idade = $request->input('nome');
     $carteira = $request->input('carteira');
     if ($idade >= 18) {
@@ -356,8 +361,7 @@ Route::Get('/exercicios33', function (Request $request) {
     }
 });
 
-
-Route::Get('/exercicios34', function (Request $request) {
+Route::Get('/exercicios36', function (Request $request) {
 
     $numero1 = $request->input('numero1');
     $numero2 = $request->input('numero2');
@@ -372,7 +376,7 @@ Route::Get('/exercicios34', function (Request $request) {
 });
 
 
-Route::Get('/exercicios35', function (Request $request) {
+Route::Get('/exercicios37', function (Request $request) {
 
     $nome = $request->input('nome');
     $idade = $request->input('idade');
@@ -383,7 +387,7 @@ Route::Get('/exercicios35', function (Request $request) {
     }
 });
 
-Route::Get('/exercicios36', function (Request $request) {
+Route::Get('/exercicios38', function (Request $request) {
 
     $numero1 = $request->input('numero1');
     $numero2 = $request->input('numero2');
@@ -397,7 +401,7 @@ Route::Get('/exercicios36', function (Request $request) {
     return $resultado;
 });
 
-Route::Get('/exercicios37', function (Request $request) {
+Route::Get('/exercicios39', function (Request $request) {
     $numero1 = $request->input('numero1');
     $numero2 = $request->input('numero2');
     if ($numero1 * $numero2 > 100) {
@@ -410,7 +414,7 @@ Route::Get('/exercicios37', function (Request $request) {
 });
 
 
-Route::Get('/exercicios38', function (Request $request) {
+Route::Get('/exercicios40', function (Request $request) {
     $numero1 = $request->input('numero1');
     $numero2 = $request->input('numero2');
     $resultado = $numero1 + $numero2;
