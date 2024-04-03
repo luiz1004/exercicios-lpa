@@ -424,3 +424,123 @@ Route::Get('/exercicios40', function (Request $request) {
         return $numero1 / $numero2;
     };
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Route::Get('/exer1', function (Request $request) {
+    $nota1 = $request->input('nota1');
+    $nota2 = $request->input('nota2');
+    $nota3 = $request->input('nota3');
+    $resultado = ($nota1 + $nota2 + $nota3) / 3;
+    if ($resultado >= 7) {
+        return "aprovado";
+    } else {
+        return "reprovado";
+    }
+});
+
+Route::Get('exer2', function (Request $request) {
+    $renda1 = $request->input('renda1');
+
+    if ($renda1 <= 1900) {
+        return "isento de imposto";
+    }
+    if ($renda1 > 1901) {
+        if ($renda1 <= 2800) {
+            return $renda1 - (7 * $renda1) / 100;
+        }
+    }
+    if ($renda1 > 2801) {
+        if ($renda1 <= 3700) {
+            return $renda1 - (15 * $renda1) / 100;
+        }
+    }
+    if ($renda1 > 3700) {
+        if ($renda1 >= 3700) {
+            return $renda1 - (22 * $renda1) / 100;
+        }
+    }
+});
+
+Route::Get('exer3', function (Request $request) {
+    $ano = $request->input('ano');
+    if ($ano % 4 == 0) {
+        return "é bisexto";
+    } else return "nao é bisexto";
+});
+
+Route::Get('exer4', function (Request $request) {
+    $preco = $request->input('preco');
+
+
+    if ($preco >= 1000) {
+        if ($preco >= 1000) {
+            return $preco - (15 * $preco) / 100;
+        }
+    }
+});
+
+Route::Get('exer5', function (Request $request) {
+    $peso = $request->input('peso');
+    $altura = $request->input('altura');
+    $resultado = $peso / ($altura * $altura);
+    if ($resultado < 18.5) {
+        return "baixo peso";
+    } else if ($resultado >= 18.5) {
+        if ($resultado <= 29.9) {
+            return "peso normal";
+        }
+    }
+    if ($resultado < 25) {
+        if ($resultado <= 29.9) {
+            return "sobre peso";
+        }
+    }
+    if ($resultado < 30) {
+        if ($resultado <= 34.9) {
+            return "obesidade classe 1";
+        }
+    }
+    if ($resultado < 35) {
+        if ($resultado <= 39.9) {
+            return "obesidade classe 2";
+        }
+    } else {
+        return "obesidade classe 3";
+    }
+});
+
+
+Route::Get('exerc6', function (Request $request) {
+    $salario = $request->input('salario');
+    $codigo = $request->input('codigo');
+    if ($codigo == 1) {
+        return (($salario * 5) / 100);
+    }
+    if ($codigo == 2) {
+        return (($salario * 10) / 100);
+    }
+    if ($codigo == 3) {
+        return (($salario * 15) / 100);
+    }
+    if ($codigo == 4) {
+        return (($salario * 20) / 100);
+    }
+});
