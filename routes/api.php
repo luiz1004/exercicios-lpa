@@ -383,6 +383,20 @@ Route::Get('/exercicios35', function (Request $request) {
     }
 });
 
+Route::Get('/exercicios36', function (Request $request) {
+
+    $numero1 = $request->input('numero1');
+    $numero2 = $request->input('numero2');
+
+    if ($numero1 == 0) {
+        return "o primeiro numero é igual a 0";
+    } elseif ($numero2 == 0) {
+        return "o segundo numero é igual a 0";
+    }
+    $resultado = $numero1 / $numero2;
+    return $resultado;
+});
+
 Route::Get('/exercicios37', function (Request $request) {
     $numero1 = $request->input('numero1');
     $numero2 = $request->input('numero2');
@@ -395,22 +409,14 @@ Route::Get('/exercicios37', function (Request $request) {
     }
 });
 
-Route::Get('/exercicios36', function (Request $request) {
 
+Route::Get('/exercicios38', function (Request $request) {
     $numero1 = $request->input('numero1');
     $numero2 = $request->input('numero2');
-
-    if ($numero1 == 0) {
-        return "o primeiro numero é igual a 0";
-    } elseif ($numero2 == 0) {
-        return "o segundo numero é igual a 0";
-   
-    }
-    $resultado = $numero1 / $numero2;
-    return $resultado;
-});
-
-
-Route::Get('exercicio', function(Request $request){
-
+    $resultado = $numero1 + $numero2;
+    if ($resultado % 2 == 0) {
+        return "a soma dos 2 é par vamos multiplicar";
+    } else {
+        return $numero1 / $numero2;
+    };
 });
